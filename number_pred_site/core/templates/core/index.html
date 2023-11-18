@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Next number prediction</title>
+    <link rel="stylesheet" href="{% static "core/index.css" %}" >
+</head>
+<body>
+<div class="wrap">
+    <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>
+            <input type="text" name="Name" class="searchTerm" placeholder="Please enter your sequence of number">
+            <h2><p>Example: [70,  80,  90, 100, 110, 120, 130]</p></h2>
+        </div>
+        <br>
+        <button type="submit" name="pred_button" class="searchButton">Submit
+            <i class="fa fa-search"></i>
+        </button>
+    </form>
+    <div id="response-control">
+     {% if response %}
+      <h2>The next number in sequence is: {{ response }}</h2>
+        {% else %}
+        <h2>Please submit a correct sequence of number</h2>
+    {% endif %}
+    </div>
+</div>
+
+</body>
+</html>

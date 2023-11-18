@@ -1,0 +1,26 @@
+ECHO is on.
+# Ignore database files
+*.sqlite3
+
+# Ignore static files
+/static/
+
+# Ignore media files
+/media/
+
+
+# Ignore environment-specific settings
+.env
+env/
+env/Lib/site-packages/clang/native/libclang.dll
+env/Lib/site-packages/tensorflow/python/_pywrap_tensorfl
+env/Lib/site-packages/tensorflow/python/_pywrap_tensorflow
+env/Lib/site-packages/tensorflow/python/_pywrap_tensorflow_internal.pyd 
+
+# Ignore editor-specific files
+.vscode/
+.idea/
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
